@@ -1,7 +1,7 @@
 # wp-salts
 
-[![npm](https://flat.badgen.net/npm/license/makensis)](https://www.npmjs.org/package/wp-salts)
-[![npm](https://flat.badgen.net/npm/v/makensis)](https://www.npmjs.org/package/wp-salts)
+[![npm](https://flat.badgen.net/npm/license/wp-salts)](https://www.npmjs.org/package/wp-salts)
+[![npm](https://flat.badgen.net/npm/v/wp-salts)](https://www.npmjs.org/package/wp-salts)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-wp-salts)](https://circleci.com/gh/idleberg/node-wp-salts)
 [![David](https://flat.badgen.net/david/dev/idleberg/node-wp-salts)](https://david-dm.org/idleberg/node-wp-salts?type=dev)
 
@@ -16,9 +16,14 @@ Generates an object of default WordPress salts (or any other string)
 Use ES6 imports or `require()` to include the module:
 
 ```js
-const { wpSalts } = require('makensis');
+const { wpSalts } = require('wp-salts');
 
+// Standard WordPress salts
 wpSalts();
+
+// Custom salts
+wpSalts('SECURE_AUTH_KEY');
+wpSalts(['AUTH_KEY', 'AUTH_SALT']);
 ```
 
 - [atom-language-nsis](https://atom.io/packages/language-nsis) - NSIS package for Atom
