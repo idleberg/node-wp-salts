@@ -2,7 +2,6 @@
 
 [![npm](https://flat.badgen.net/npm/license/makensis)](https://www.npmjs.org/package/wp-salts)
 [![npm](https://flat.badgen.net/npm/v/makensis)](https://www.npmjs.org/package/wp-salts)
-[![Travis](https://flat.badgen.net/travis/idleberg/node-wp-salts)](https://travis-ci.org/idleberg/node-wp-salts)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-wp-salts)](https://circleci.com/gh/idleberg/node-wp-salts)
 [![David](https://flat.badgen.net/david/dev/idleberg/node-wp-salts)](https://david-dm.org/idleberg/node-wp-salts?type=dev)
 
