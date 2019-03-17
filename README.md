@@ -21,9 +21,6 @@ const { wpSalts } = require('makensis');
 wpSalts();
 ```
 
-- [atom-language-nsis](https://atom.io/packages/language-nsis) - NSIS package for Atom
-- [vscode-nsis](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis) - NSIS package for Visual Studio Code
-
 # Credits
 - [roots.io](https://roots.io)
 - [idleberg](http://github.com/idleberg)
