@@ -9,11 +9,13 @@ Generates an object of default WordPress salts (or any other string)
 
 ## Installation
 
-`yarn add wp-salts || npm install wp-salts -S`
+`npm install wp-salts -S`
 
 ## Usage
 
 Use ES6 imports or `require()` to include the module:
+
+**Example:**
 
 ```js
 const { wpSalts } = require('wp-salts');
