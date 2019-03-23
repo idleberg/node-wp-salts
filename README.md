@@ -25,7 +25,7 @@ wpSalts();
 
 // Custom salts
 wpSalts('SECURE_AUTH_KEY');
-wpSalts(['AUTH_KEY', 'AUTH_SALT']);
+wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
 # Credits
