@@ -13,16 +13,17 @@ const wordpressKeys = [
 
 /**
  * Returns object of default WordPress salts or any string/array or strings
+ * @param length - length of the salt, defaults to 64
  * @returns - object of salts
  */
-const wpSalts = (keys: string|Array<string> = ''): Object => {
+const wpSalts = (keys: string|Array<string> = '', saltLength: number = 64): Object => {
   let output = {};
 
   if (typeof keys === 'string') {
       keys = (keys.length > 0) ? [ keys ] : wordpressKeys;
   }
 
-  keys.map(key => output[key] = generateSalt());
+  keys.map(key => output[key] = generateSalt(saltLength));
 
   return output;
 };

@@ -13,7 +13,7 @@ Generates an object of default WordPress salts (or any other string)
 
 ## Usage
 
-Use ES6 imports or `require()` to include the module:
+`wpSalts(keys: string|Array, length)`
 
 **Example:**
 

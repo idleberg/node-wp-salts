@@ -60,12 +60,13 @@ const getRandomChar = (): string => {
 
 /**
  * Generate a salt
+ * @param length - length of the salt, defaults to 64
  * @returns - string
  *
  * @see https://roots.io/salts.html
  */
-const generateSalt = (): string => {
-  return Array.apply(null, Array(64))
+const generateSalt = (saltLength = 64): string => {
+  return Array.apply(null, Array(saltLength))
     .map(getRandomChar)
     .join('');
 };

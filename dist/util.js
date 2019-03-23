@@ -47,12 +47,14 @@ var getRandomChar = function () {
 };
 /**
  * Generate a salt
+ * @param length - length of the salt, defaults to 64
  * @returns - string
  *
  * @see https://roots.io/salts.html
  */
-var generateSalt = function () {
-    return Array.apply(null, Array(64))
+var generateSalt = function (saltLength) {
+    if (saltLength === void 0) { saltLength = 64; }
+    return Array.apply(null, Array(saltLength))
         .map(getRandomChar)
         .join('');
 };
