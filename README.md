@@ -28,9 +28,13 @@ wpSalts('SECURE_AUTH_KEY');
 wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
-# Credits
+## Credits
 - [roots.io](https://roots.io)
 - [idleberg](http://github.com/idleberg)
+
+## Related
+
+- [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
 
 ## License
 
