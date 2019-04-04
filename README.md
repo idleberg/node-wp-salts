@@ -13,7 +13,7 @@ Generates an object of default WordPress salts (or any other string)
 
 ## Usage
 
-`wpSalts(keys: string|Array, length)`
+`wpSalts(keys: string|Array, length?: number)`
 
 **Example:**
 
