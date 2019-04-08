@@ -12,7 +12,7 @@ var wordpressKeys = [
     'NONCE_SALT',
 ];
 /**
- * Returns object of default WordPress salts or any string/array or strings
+ * Returns object of default WordPress salts or any string/array of strings
  * @param length - length of the salt, defaults to 64
  * @returns - object of salts
  */
