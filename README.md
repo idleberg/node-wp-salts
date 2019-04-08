@@ -13,7 +13,7 @@ Generates an object of default WordPress salts (or any other string)
 
 ## Usage
 
-`wpSalts(keys: string|Array, length)`
+`wpSalts(keys: string|Array, length?: number)`
 
 **Example:**
 
@@ -31,6 +31,10 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 # Credits
 - [austinpray](https://github.com/idleberg)
 - [idleberg](http://github.com/idleberg)
+
+## Related
+
+- [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
 
 ## License
 
