@@ -29,7 +29,7 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
 # Credits
-- [roots.io](https://roots.io)
+- [austinpray](https://github.com/idleberg)
 - [idleberg](http://github.com/idleberg)
 
 ## License
