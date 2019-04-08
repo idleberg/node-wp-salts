@@ -29,8 +29,8 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
 # Credits
-- [austinpray](https://github.com/idleberg)
-- [idleberg](http://github.com/idleberg)
+- [austinpray](https://github.com/austinpray)
+- [idleberg](https://github.com/idleberg)
 
 ## Related
 
