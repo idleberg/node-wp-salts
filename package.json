@@ -21,8 +21,7 @@
     "build": "tsc --pretty --project ./",
     "dev": "tsc --watch --pretty --project ./",
     "lint": "tslint --project .",
-    "prepublishOnly": "npm test && npm run build",
-    "test": "npm run lint"
+    "test": "npx ava ./test/ --verbose"
   },
   "husky": {
     "hooks": {

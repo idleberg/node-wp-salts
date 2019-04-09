@@ -23,7 +23,10 @@ var wpSalts = function (keys, saltLength) {
     if (typeof keys === 'string') {
         keys = (keys.length > 0) ? [keys] : wordpressKeys;
     }
-    else if (keys.length === 0) {
+    else if (typeof keys === 'object') {
+        keys = (keys.length > 0) ? keys : wordpressKeys;
+    }
+    else {
         keys = wordpressKeys;
     }
     keys.map(function (key) { return output[key] = util_1.generateSalt(saltLength); });
