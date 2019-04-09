@@ -16,7 +16,7 @@ const wpKeys = [
 ];
 
 // Tests
-test('Default: WordPress keys', async t => {
+test('Default: Key count', async t => {
   const actual = Object.keys(wpSalts()).sort();
   const expected = wpKeys;
 
@@ -52,7 +52,7 @@ test('Default: Key length (16-bit)', async t => {
   t.is(expected, actual);
 });
 
-test('Custom String: WordPress keys', async t => {
+test('Custom String: Key count', async t => {
   const key = 'test';
 
   const actual = Object.keys(wpSalts(key));
@@ -82,7 +82,7 @@ test('Custom String: Key length (16-bit)', async t => {
   t.is(expected, actual);
 });
 
-test('Custom Array: WordPress keys', async t => {
+test('Custom Array: Key count', async t => {
   const keys = ['test1', 'test2', 'test3']
 
   const actual = Object.keys(wpSalts(keys));
