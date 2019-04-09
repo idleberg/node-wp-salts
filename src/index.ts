@@ -21,8 +21,8 @@ const wpSalts = (keys: string|Array<string> = '', saltLength: number = 64): Obje
 
   if (typeof keys === 'string') {
     keys = (keys.length > 0) ? [ keys ] : wordpressKeys;
-  } else if (typeof keys === 'object' && keys.length === 0) {
-    keys = wordpressKeys;
+  } else if (typeof keys === 'object') {
+    keys = (keys.length > 0) ? keys : wordpressKeys;
   }
 
   keys.map(key => output[key] = generateSalt(saltLength));
