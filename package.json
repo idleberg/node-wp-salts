@@ -1,6 +1,6 @@
 {
   "name": "wp-salts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generates an object of default WordPress salts (or any other string)",
   "main": "dist/index.js",
   "files": [
