@@ -21,6 +21,7 @@
     "build": "tsc --pretty --project ./",
     "dev": "tsc --watch --pretty --project ./",
     "lint": "tslint --project .",
+    "release": "np --no-yarn",
     "test": "npx ava ./test/ --verbose"
   },
   "husky": {
@@ -35,6 +36,7 @@
     "@types/node": "^11.11.6",
     "ava": "^1.4.1",
     "husky": "^1.3.1",
+    "np": "^4.0.2",
     "tslint": "^5.12.1",
     "typedoc": "^0.14.2",
     "typescript": "^3.3.4000"
