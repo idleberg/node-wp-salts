@@ -24,7 +24,7 @@ const wpSalts = (keys: string|Array<string> = '', saltLength: number = 64): Obje
   } else if (typeof keys === 'object') {
     keys = (keys.length > 0) ? keys : wordpressKeys;
   } else {
-    throw new TypeError('Unsupported type, key is', typeof key);
+    keys = wordpressKeys;
   }
 
   keys.map(key => output[key] = generateSalt(saltLength));
