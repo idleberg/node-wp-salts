@@ -29,6 +29,7 @@ var wpSalts = function (keys, saltLength) {
     else {
         keys = wordpressKeys;
     }
+    saltLength = (saltLength < 64) ? 64 : saltLength;
     keys.map(function (key) { return output[key] = util_1.generateSalt(saltLength); });
     return output;
 };

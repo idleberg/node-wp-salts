@@ -28,6 +28,8 @@ wpSalts('SECURE_AUTH_KEY');
 wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
+**Note:** The minimum length of each salt is 8-bit or 64 characters
+
 ## Credits
 - [austinpray](https://github.com/austinpray)
 - [idleberg](https://github.com/idleberg)
