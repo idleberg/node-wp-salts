@@ -1,6 +1,6 @@
 {
   "name": "wp-salts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Generates an object of default WordPress salts (or any other string)",
   "scripts": {
     "build": "tsc --pretty --project ./",
