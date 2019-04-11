@@ -1,21 +1,26 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
+        "declaration": true,
+        "inlineSourceMap": true,
         "lib": [
             "dom",
             "es7"
         ],
-        "target": "es5",
-        "outDir": "./dist",
+        "module": "commonjs",
+        "moduleResolution": "node",
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": false,
+        "outDir": "./dist",
         "removeComments": false,
         "rootDir": "src",
-        "sourceMap": false
+        "sourceMap": false,
+        "target": "es5",
+
     },
     "exclude": [
         ".vscode-test",
-        "node_modules"
+        "dist",
+        "node_modules",
+        "test"
     ]
 }
