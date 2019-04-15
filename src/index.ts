@@ -1,6 +1,6 @@
 import { generateSalt } from './util';
 
-const wordpressKeys = [
+const WORDPRESS_KEYS = [
   'AUTH_KEY',
   'SECURE_AUTH_KEY',
   'LOGGED_IN_KEY',
@@ -10,6 +10,7 @@ const wordpressKeys = [
   'LOGGED_IN_SALT',
   'NONCE_SALT',
 ];
+const MINIMUM_KEY_LENGTH = 64;
 
 /**
  * Returns object of default WordPress salts or any string/array of strings
@@ -20,14 +21,14 @@ const wpSalts = (keys: string|Array<string> = '', saltLength: number = 64): Obje
   let output = {};
 
   if (typeof keys === 'string') {
-    keys = (keys.length > 0) ? [ keys ] : wordpressKeys;
+    keys = (keys.length > 0) ? [ keys ] : WORDPRESS_KEYS;
   } else if (typeof keys === 'object') {
-    keys = (keys.length > 0) ? keys : wordpressKeys;
+    keys = (keys.length > 0) ? keys : WORDPRESS_KEYS;
   } else {
-    keys = wordpressKeys;
+    keys = WORDPRESS_KEYS;
   }
 
-  saltLength = (saltLength < 64) ? 64 : saltLength;
+  saltLength = (saltLength < MINIMUM_KEY_LENGTH) ? MINIMUM_KEY_LENGTH : saltLength;
 
   keys.map(key => output[key] = generateSalt(saltLength));
 

@@ -1,5 +1,7 @@
 import * as getRandomValues from 'get-random-values';
 
+const MINIMUM_KEY_LENGTH = 64;
+
 /**
  * Generate random number
  * @param min - lowest value
@@ -65,7 +67,7 @@ const getRandomChar = (): string => {
  *
  * @see https://roots.io/salts.html
  */
-const generateSalt = (saltLength = 64): string => {
+const generateSalt = (saltLength = MINIMUM_KEY_LENGTH): string => {
   return Array.apply(null, Array(saltLength))
     .map(getRandomChar)
     .join('');
