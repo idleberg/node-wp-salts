@@ -4,7 +4,7 @@ import { wpSalts } from '../dist';
 // Dependencies
 import test from 'ava';
 
-const wpKeys = [
+const WORDPRESS_KEYS = [
   'AUTH_KEY',
   'AUTH_SALT',
   'LOGGED_IN_KEY',
@@ -18,7 +18,7 @@ const wpKeys = [
 // Tests
 test('Default: Key count', async t => {
   const actual = Object.keys(wpSalts()).sort();
-  const expected = wpKeys;
+  const expected = WORDPRESS_KEYS;
 
   t.deepEqual(expected, actual);
 });
@@ -31,7 +31,7 @@ test('Default: Key length (8-bit)', async t => {
     actual += salts[key].length;
   });
 
-  const expected = wpKeys.length * 64;
+  const expected = WORDPRESS_KEYS.length * 64;
 
   t.is(expected, actual);
 });
@@ -46,7 +46,7 @@ test('Default: Key length (16-bit)', async t => {
     actual += salts[key].length;
   });
 
-  const expected = wpKeys.length * keyLength;
+  const expected = WORDPRESS_KEYS.length * keyLength;
 
   t.is(expected, actual);
 });
