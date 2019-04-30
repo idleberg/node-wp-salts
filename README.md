@@ -3,7 +3,7 @@
 [![npm](https://flat.badgen.net/npm/license/wp-salts)](https://www.npmjs.org/package/wp-salts)
 [![npm](https://flat.badgen.net/npm/v/wp-salts)](https://www.npmjs.org/package/wp-salts)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-wp-salts)](https://circleci.com/gh/idleberg/node-wp-salts)
-[![David](https://flat.badgen.net/david/dev/idleberg/node-wp-salts)](https://david-dm.org/idleberg/node-wp-salts)
+[![David](https://flat.badgen.net/david/dep/idleberg/node-wp-salts)](https://david-dm.org/idleberg/node-wp-salts)
 
 Generates an object of default WordPress salts (or any other string)
 
