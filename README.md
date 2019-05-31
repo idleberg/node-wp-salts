@@ -36,6 +36,8 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 
 ## Related
 
+- [atom-wordpress-salts](https://atom.io/packages/wordpress-salts)
+- [vscode-wordpress-salts](https://marketplace.visualstudio.com/items?itemName=idleberg.wordpress-salts)
 - [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
 
 ## License
