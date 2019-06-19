@@ -38,7 +38,7 @@ test('Default: Key length (8-bit)', async t => {
 
 test('Default: Key length (16-bit)', async t => {
   const keyLength = 128;
-  const salts = wpSalts({}, keyLength);
+  const salts = wpSalts(null, keyLength);
 
   let actual = 0;
 
@@ -53,7 +53,7 @@ test('Default: Key length (16-bit)', async t => {
 
 test('Default: Key length below minimum', async t => {
   const keyLength = 32;
-  const salts = wpSalts({}, keyLength);
+  const salts = wpSalts(null, keyLength);
 
   let actual = 0;
 

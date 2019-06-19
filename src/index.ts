@@ -23,7 +23,7 @@ const wpSalts = (keys: string|Array<string> = '', saltLength: number = 64): Obje
   if (typeof keys === 'string') {
     keys = (keys.length > 0) ? [ keys ] : WORDPRESS_KEYS;
   } else if (typeof keys === 'object') {
-    keys = (keys.length > 0) ? keys : WORDPRESS_KEYS;
+    keys = (keys !== null && keys.length > 0) ? keys : WORDPRESS_KEYS;
   } else {
     keys = WORDPRESS_KEYS;
   }
