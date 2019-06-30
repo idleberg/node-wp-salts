@@ -5,7 +5,7 @@
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-wp-salts)](https://circleci.com/gh/idleberg/node-wp-salts)
 [![David](https://flat.badgen.net/david/dep/idleberg/node-wp-salts)](https://david-dm.org/idleberg/node-wp-salts)
 
-Generates an object of default WordPress salts (or any other string)
+Generates an object of default WordPress salts (or any other string) without the need of an internet-connection
 
 ## Installation
 

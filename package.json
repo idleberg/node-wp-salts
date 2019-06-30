@@ -1,7 +1,7 @@
 {
   "name": "wp-salts",
   "version": "0.3.4",
-  "description": "Generates an object of default WordPress salts (or any other string)",
+  "description": "Generates an object of default WordPress salts (or any other string) without the need of an internet-connection",
   "scripts": {
     "build": "tsc --pretty --project ./",
     "dev": "tsc --watch --pretty --project ./",
