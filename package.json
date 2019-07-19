@@ -23,11 +23,6 @@
     "cryptography"
   ],
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "get-random-values": "^1.2.0"
   },
