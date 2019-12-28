@@ -67,10 +67,10 @@ test('Default: Key length below minimum', async t => {
 });
 
 test('Custom String: Key count', async t => {
-  const key = 'test';
+  const defaultKey = 'test';
 
-  const actual = Object.keys(wpSalts(key));
-  const expected = [ key ];
+  const actual = Object.keys(wpSalts(defaultKey));
+  const expected = [ defaultKey ];
 
   t.deepEqual(expected, actual);
 });
@@ -108,10 +108,10 @@ test('Custom String: Key length below minimum', async t => {
 });
 
 test('Custom Array: Key count', async t => {
-  const keys = ['test1', 'test2', 'test3']
+  const defaultKeys = ['test1', 'test2', 'test3']
 
-  const actual = Object.keys(wpSalts(keys));
-  const expected = keys;
+  const actual = Object.keys(wpSalts(defaultKeys));
+  const expected = defaultKeys;
 
   t.deepEqual(expected, actual);
 });
@@ -136,11 +136,7 @@ test('Custom Array: Key length (8-bit)', async t => {
 });
 
 test('Custom Array: Key length (16-bit)', async t => {
-  const defaultKeys = [
-    'test1',
-    'test2',
-    'test3'
-  ];
+  const defaultKeys = ['test1', 'test2', 'test3'];
   const keyLength = 128;
   const salts = wpSalts(defaultKeys, keyLength);
 
@@ -156,11 +152,7 @@ test('Custom Array: Key length (16-bit)', async t => {
 });
 
 test('Custom Array: Key length below minimum', async t => {
-  const defaultKeys = [
-    'test1',
-    'test2',
-    'test3'
-  ];
+  const defaultKeys = ['test1', 'test2', 'test3'];
   const keyLength = 32;
   const salts = wpSalts(defaultKeys, keyLength);
 
