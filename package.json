@@ -6,7 +6,7 @@
     "build": "tsc --pretty --project ./",
     "dev": "tsc --watch --pretty --project ./",
     "lint": "tslint --project .",
-    "test": "npx ava --verbose"
+    "test": "ava --verbose test/*.js"
   },
   "main": "dist/index.js",
   "files": [
