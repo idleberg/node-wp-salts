@@ -4,8 +4,9 @@
   "description": "Generates an object of default WordPress salts (or any other string)",
   "scripts": {
     "build": "tsc --pretty --project ./",
-    "dev": "tsc --watch --pretty --project ./",
+    "dev": "npm run start",
     "lint": "tslint --project .",
+    "start": "tsc --watch --pretty --project ./",
     "test": "ava --verbose test/*.js"
   },
   "main": "dist/index.js",
