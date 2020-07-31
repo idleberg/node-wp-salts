@@ -1,8 +1,5 @@
-// Modules
-import { wpSalts } from '../dist';
-
-// Dependencies
 import test from 'ava';
+import { wpSalts } from '../dist';
 
 const WORDPRESS_KEYS = [
   'AUTH_KEY',
