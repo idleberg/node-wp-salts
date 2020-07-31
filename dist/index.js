@@ -1,6 +1,116 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = require("./util");
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var crypto = _interopDefault(require('crypto'));
+
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof commonjsGlobal !== "undefined") {
+    win = commonjsGlobal;
+} else if (typeof self !== "undefined"){
+    win = self;
+} else {
+    win = {};
+}
+
+var window_1 = win;
+
+function getRandomValues(buf) {
+  if (window_1.crypto && window_1.crypto.getRandomValues) {
+    return window_1.crypto.getRandomValues(buf);
+  }
+  if (typeof window_1.msCrypto === 'object' && typeof window_1.msCrypto.getRandomValues === 'function') {
+    return window_1.msCrypto.getRandomValues(buf);
+  }
+  if (crypto.randomBytes) {
+    if (!(buf instanceof Uint8Array)) {
+      throw new TypeError('expected Uint8Array');
+    }
+    if (buf.length > 65536) {
+      var e = new Error();
+      e.code = 22;
+      e.message = 'Failed to execute \'getRandomValues\' on \'Crypto\': The ' +
+        'ArrayBufferView\'s byte length (' + buf.length + ') exceeds the ' +
+        'number of bytes of entropy available via this API (65536).';
+      e.name = 'QuotaExceededError';
+      throw e;
+    }
+    var bytes = crypto.randomBytes(buf.length);
+    buf.set(bytes);
+    return buf;
+  }
+  else {
+    throw new Error('No secure random number generator available.');
+  }
+}
+
+var getRandomValues_1 = getRandomValues;
+
+var MINIMUM_KEY_LENGTH = 64;
+/**
+ * Generate random number
+ * @param min - lowest value
+ * @param max - highest value
+ * @returns - random number
+ *
+ * @see https://github.com/EFForg/OpenWireless/blob/0e0bd06277f7178f840c36a9b799c7659870fa57/app/js/diceware.js#L59
+ */
+var getRandom = function (min, max) {
+    var randomValue = 0;
+    var range = max - min;
+    var bitsNeeded = Math.ceil(Math.log2(range));
+    if (bitsNeeded > 53) {
+        throw new RangeError('Cannot generate numbers larger than 53 bits.');
+    }
+    var bytesNeeded = Math.ceil(bitsNeeded / 8);
+    var mask = Math.pow(2, bitsNeeded) - 1;
+    var byteArray = new Uint8Array(bytesNeeded);
+    getRandomValues_1(byteArray);
+    var p = (bytesNeeded - 1) * 8;
+    for (var i = 0; i < bytesNeeded; i++) {
+        randomValue += byteArray[i] * Math.pow(2, p);
+        p -= 8;
+    }
+    randomValue = randomValue & mask;
+    return randomValue >= range ? getRandom(min, max) : min + randomValue;
+};
+/**
+ * Get random character
+ * @returns - random character
+ *
+ * @see https://roots.io/salts.html
+ */
+var getRandomChar = function () {
+    var minCharacter = 33;
+    var maxCharacter = 126;
+    var character = String.fromCharCode(getRandom(minCharacter, maxCharacter));
+    if (['\'', '"', '\\'].some(function (badCharacter) {
+        return character === badCharacter;
+    })) {
+        return getRandomChar();
+    }
+    return character;
+};
+/**
+ * Generate a salt
+ * @param length - length of the salt, defaults to 64
+ * @returns - string
+ *
+ * @see https://roots.io/salts.html
+ */
+var generateSalt = function (saltLength) {
+    if (saltLength === void 0) { saltLength = MINIMUM_KEY_LENGTH; }
+    return Array.apply(void 0, Array(saltLength)).map(getRandomChar)
+        .join('');
+};
+
 var WORDPRESS_KEYS = [
     'AUTH_KEY',
     'SECURE_AUTH_KEY',
@@ -11,7 +121,7 @@ var WORDPRESS_KEYS = [
     'LOGGED_IN_SALT',
     'NONCE_SALT',
 ];
-var MINIMUM_KEY_LENGTH = 64;
+var MINIMUM_KEY_LENGTH$1 = 64;
 /**
  * Returns object of default WordPress salts or any string/array of strings
  * @param length - length of the salt, defaults to 64
@@ -30,9 +140,9 @@ var wpSalts = function (keys, saltLength) {
     else {
         keys = WORDPRESS_KEYS;
     }
-    saltLength = (saltLength < MINIMUM_KEY_LENGTH) ? MINIMUM_KEY_LENGTH : saltLength;
-    keys.map(function (key) { return output[key] = util_1.generateSalt(saltLength); });
+    saltLength = (saltLength < MINIMUM_KEY_LENGTH$1) ? MINIMUM_KEY_LENGTH$1 : saltLength;
+    keys.map(function (key) { return output[key] = generateSalt(saltLength); });
     return output;
 };
+
 exports.wpSalts = wpSalts;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSwrQkFBc0M7QUFFdEMsSUFBTSxjQUFjLEdBQUc7SUFDckIsVUFBVTtJQUNWLGlCQUFpQjtJQUNqQixlQUFlO0lBQ2YsV0FBVztJQUNYLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLFlBQVk7Q0FDYixDQUFDO0FBQ0YsSUFBTSxrQkFBa0IsR0FBRyxFQUFFLENBQUM7QUFFOUI7Ozs7R0FJRztBQUNILElBQU0sT0FBTyxHQUFHLFVBQUMsSUFBb0MsRUFBRSxVQUF1QjtJQUE3RCxxQkFBQSxFQUFBLFNBQW9DO0lBQUUsMkJBQUEsRUFBQSxlQUF1QjtJQUM1RSxJQUFJLE1BQU0sR0FBRyxFQUFFLENBQUM7SUFFaEIsSUFBSSxPQUFPLElBQUksS0FBSyxRQUFRLEVBQUU7UUFDNUIsSUFBSSxHQUFHLENBQUMsSUFBSSxDQUFDLE1BQU0sR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBRSxJQUFJLENBQUUsQ0FBQyxDQUFDLENBQUMsY0FBYyxDQUFDO0tBQ3REO1NBQU0sSUFBSSxPQUFPLElBQUksS0FBSyxRQUFRLEVBQUU7UUFDbkMsSUFBSSxHQUFHLENBQUMsSUFBSSxLQUFLLElBQUksSUFBSSxJQUFJLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLGNBQWMsQ0FBQztLQUNuRTtTQUFNO1FBQ0wsSUFBSSxHQUFHLGNBQWMsQ0FBQztLQUN2QjtJQUVELFVBQVUsR0FBRyxDQUFDLFVBQVUsR0FBRyxrQkFBa0IsQ0FBQyxDQUFDLENBQUMsQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDO0lBRWpGLElBQUksQ0FBQyxHQUFHLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxNQUFNLENBQUMsR0FBRyxDQUFDLEdBQUcsbUJBQVksQ0FBQyxVQUFVLENBQUMsRUFBdEMsQ0FBc0MsQ0FBQyxDQUFDO0lBRXhELE9BQU8sTUFBTSxDQUFDO0FBQ2hCLENBQUMsQ0FBQztBQUdBLDBCQUFPIn0=
