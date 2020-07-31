@@ -17,8 +17,8 @@ const MINIMUM_KEY_LENGTH = 64;
  * @param length - length of the salt, defaults to 64
  * @returns - object of salts
  */
-const wpSalts = (keys: string|Array<string>|null = '', saltLength: number = 64): Object => {
-  let output = {};
+const wpSalts = (keys: string|Array<string>|null = '', saltLength = 64): unknown => {
+  const output = {};
 
   if (typeof keys === 'string') {
     keys = (keys.length > 0) ? [ keys ] : WORDPRESS_KEYS;
