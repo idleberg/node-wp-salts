@@ -2,9 +2,11 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+var nodeCrypto = require('crypto');
 
-var crypto = _interopDefault(require('crypto'));
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var nodeCrypto__default = /*#__PURE__*/_interopDefaultLegacy(nodeCrypto);
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -29,7 +31,7 @@ function getRandomValues(buf) {
   if (typeof window_1.msCrypto === 'object' && typeof window_1.msCrypto.getRandomValues === 'function') {
     return window_1.msCrypto.getRandomValues(buf);
   }
-  if (crypto.randomBytes) {
+  if (nodeCrypto__default['default'].randomBytes) {
     if (!(buf instanceof Uint8Array)) {
       throw new TypeError('expected Uint8Array');
     }
@@ -42,7 +44,7 @@ function getRandomValues(buf) {
       e.name = 'QuotaExceededError';
       throw e;
     }
-    var bytes = crypto.randomBytes(buf.length);
+    var bytes = nodeCrypto__default['default'].randomBytes(buf.length);
     buf.set(bytes);
     return buf;
   }
