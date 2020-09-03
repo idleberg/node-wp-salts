@@ -26,7 +26,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "get-random-values": "^1.2.0"
+    "get-random-values": "^1.2.0",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
