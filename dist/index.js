@@ -64,7 +64,7 @@ var MINIMUM_KEY_LENGTH = 64;
  *
  * @see https://github.com/EFForg/OpenWireless/blob/0e0bd06277f7178f840c36a9b799c7659870fa57/app/js/diceware.js#L59
  */
-var getRandom = function (min, max) {
+function getRandom(min, max) {
     var randomValue = 0;
     var range = max - min;
     var bitsNeeded = Math.ceil(Math.log2(range));
@@ -82,14 +82,14 @@ var getRandom = function (min, max) {
     }
     randomValue = randomValue & mask;
     return randomValue >= range ? getRandom(min, max) : min + randomValue;
-};
+}
 /**
  * Get random character
  * @returns - random character
  *
  * @see https://roots.io/salts.html
  */
-var getRandomChar = function () {
+function getRandomChar() {
     var minCharacter = 33;
     var maxCharacter = 126;
     var character = String.fromCharCode(getRandom(minCharacter, maxCharacter));
@@ -99,7 +99,7 @@ var getRandomChar = function () {
         return getRandomChar();
     }
     return character;
-};
+}
 /**
  * Generate a salt
  * @param length - length of the salt, defaults to 64
@@ -107,11 +107,11 @@ var getRandomChar = function () {
  *
  * @see https://roots.io/salts.html
  */
-var generateSalt = function (saltLength) {
+function generateSalt(saltLength) {
     if (saltLength === void 0) { saltLength = MINIMUM_KEY_LENGTH; }
     return Array.apply(void 0, Array(saltLength)).map(getRandomChar)
         .join('');
-};
+}
 
 var WORDPRESS_KEYS = [
     'AUTH_KEY',
