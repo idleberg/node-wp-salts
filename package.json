@@ -7,6 +7,7 @@
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "start": "rollup --watch --config",
+    "publish": "np --no-yarn",
     "test": "ava ./test/*.js --verbose"
   },
   "main": "dist/index.js",
@@ -41,6 +42,7 @@
     "husky": "^4.3.7",
     "jsonlint": "^1.6.3",
     "lint-staged": "^10.5.3",
+    "np": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "remark-cli": "^9.0.0",
