@@ -17,7 +17,7 @@ const MINIMUM_KEY_LENGTH = 64;
  * @param length - length of the salt, defaults to 64
  * @returns - object of salts
  */
-const wpSalts = (keys: string|Array<string>|null = '', saltLength = 64): unknown => {
+const wpSalts = (keys: string | string[] | null = '', saltLength = 64): unknown => {
   const output = {};
 
   if (typeof keys === 'string') {
