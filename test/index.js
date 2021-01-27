@@ -24,7 +24,7 @@ test('Default: Key length (8-bit)', async t => {
   const salts = wpSalts();
   let actual = 0;
 
-  Object.keys(salts).sort().forEach( (key, index) => {
+  Object.keys(salts).sort().forEach(key => {
     actual += salts[key].length;
   });
 
@@ -39,7 +39,7 @@ test('Default: Key length (16-bit)', async t => {
 
   let actual = 0;
 
-  Object.keys(salts).sort().forEach( (key, index) => {
+  Object.keys(salts).sort().forEach(key => {
     actual += salts[key].length;
   });
 
@@ -54,7 +54,7 @@ test('Default: Key length below minimum', async t => {
 
   let actual = 0;
 
-  Object.keys(salts).sort().forEach( (key, index) => {
+  Object.keys(salts).sort().forEach(key => {
     actual += salts[key].length;
   });
 
