@@ -13,7 +13,9 @@ const defaults = {
     commonjs(),
     filesize(),
     nodeResolve(),
-    typescript()
+    typescript({
+      strictNullChecks: true
+    })
   ]
 };
 
