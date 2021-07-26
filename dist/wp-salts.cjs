@@ -2,11 +2,11 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var nodeCrypto = require('crypto');
+var require$$1 = require('crypto');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var nodeCrypto__default = /*#__PURE__*/_interopDefaultLegacy(nodeCrypto);
+var require$$1__default = /*#__PURE__*/_interopDefaultLegacy(require$$1);
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -24,14 +24,17 @@ if (typeof window !== "undefined") {
 
 var window_1 = win;
 
+var window$1 = window_1;
+var nodeCrypto = require$$1__default['default'];
+
 function getRandomValues(buf) {
-  if (window_1.crypto && window_1.crypto.getRandomValues) {
-    return window_1.crypto.getRandomValues(buf);
+  if (window$1.crypto && window$1.crypto.getRandomValues) {
+    return window$1.crypto.getRandomValues(buf);
   }
-  if (typeof window_1.msCrypto === 'object' && typeof window_1.msCrypto.getRandomValues === 'function') {
-    return window_1.msCrypto.getRandomValues(buf);
+  if (typeof window$1.msCrypto === 'object' && typeof window$1.msCrypto.getRandomValues === 'function') {
+    return window$1.msCrypto.getRandomValues(buf);
   }
-  if (nodeCrypto__default['default'].randomBytes) {
+  if (nodeCrypto.randomBytes) {
     if (!(buf instanceof Uint8Array)) {
       throw new TypeError('expected Uint8Array');
     }
@@ -44,7 +47,7 @@ function getRandomValues(buf) {
       e.name = 'QuotaExceededError';
       throw e;
     }
-    var bytes = nodeCrypto__default['default'].randomBytes(buf.length);
+    var bytes = nodeCrypto.randomBytes(buf.length);
     buf.set(bytes);
     return buf;
   }
@@ -55,7 +58,7 @@ function getRandomValues(buf) {
 
 var getRandomValues_1 = getRandomValues;
 
-var MINIMUM_KEY_LENGTH = 64;
+var MINIMUM_KEY_LENGTH$1 = 64;
 /**
  * Generate random number
  * @param min - lowest value
@@ -108,7 +111,7 @@ function getRandomChar() {
  * @see https://roots.io/salts.html
  */
 function generateSalt(saltLength) {
-    if (saltLength === void 0) { saltLength = MINIMUM_KEY_LENGTH; }
+    if (saltLength === void 0) { saltLength = MINIMUM_KEY_LENGTH$1; }
     return Array.apply(void 0, Array(saltLength)).map(getRandomChar)
         .join('');
 }
@@ -123,7 +126,7 @@ var WORDPRESS_KEYS = [
     'LOGGED_IN_SALT',
     'NONCE_SALT',
 ];
-var MINIMUM_KEY_LENGTH$1 = 64;
+var MINIMUM_KEY_LENGTH = 64;
 /**
  * Returns object of default WordPress salts or any string/array of strings
  * @param length - length of the salt, defaults to 64
@@ -142,7 +145,7 @@ var wpSalts = function (keys, saltLength) {
     else {
         keys = WORDPRESS_KEYS;
     }
-    saltLength = (saltLength < MINIMUM_KEY_LENGTH$1) ? MINIMUM_KEY_LENGTH$1 : saltLength;
+    saltLength = (saltLength < MINIMUM_KEY_LENGTH) ? MINIMUM_KEY_LENGTH : saltLength;
     keys.map(function (key) { return output[key] = generateSalt(saltLength); });
     return output;
 };

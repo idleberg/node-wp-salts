@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -9,4 +10,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:json/recommended'
   ],
+  rules: {},
+  ignorePatterns: [
+    'test/**/*'
+  ]
 };

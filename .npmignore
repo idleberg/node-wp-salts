@@ -1,10 +1,11 @@
 # Folders
 .circleci/
-.editorconfig
+.husky/
 src/
 test/
 
 # Files
+.editorconfig
 .eslintcache
 .gitignore
 .travis.yml

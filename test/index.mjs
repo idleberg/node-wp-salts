@@ -1,5 +1,5 @@
+import { wpSalts } from '../dist/wp-salts.mjs';
 import test from 'ava';
-import { wpSalts } from '../dist';
 
 const WORDPRESS_KEYS = [
   'AUTH_KEY',

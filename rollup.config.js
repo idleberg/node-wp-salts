@@ -1,27 +1,44 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import filesize from 'rollup-plugin-filesize';
+import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 
-const defaults = {
-  external: [ 'crypto' ],
-  output: {
-    dir: 'dist',
-    format: 'cjs'
-  },
-  plugins: [
-    commonjs(),
-    filesize(),
-    nodeResolve(),
-    typescript({
-      strictNullChecks: true
-    })
-  ]
+const plugins = [
+  commonjs(),
+  json()
+];
+
+const compilerOptions = {
+  allowSyntheticDefaultImports: true,
+  moduleResolution: "node",
+  strictNullChecks: true,
+  typeRoots: ['./types', './node_modules/@types']
 };
 
 export default [
   {
-    ...defaults,
-    input: 'src/index.ts',
+    input: 'src/wp-salts.ts',
+    output: {
+      file: 'dist/wp-salts.cjs',
+      format: 'cjs'
+    },
+    plugins: [
+      ...plugins,
+      typescript(compilerOptions)
+    ]
+  },
+  {
+    input: 'src/wp-salts.ts',
+    output: {
+      file: 'dist/wp-salts.mjs',
+      format: 'esm'
+    },
+    plugins: [
+      ...plugins,
+      typescript({
+        ...compilerOptions,
+        module: "ES2020",
+        moduleResolution: "node"
+      })
+    ]
   }
 ];
