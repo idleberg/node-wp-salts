@@ -13,5 +13,13 @@ module.exports = {
   rules: {},
   ignorePatterns: [
     'test/**/*'
-  ]
+  ],
+  "overrides": [
+    {
+      "files": ["tsconfig.json"],
+      "rules": {
+        "json/*": ["error", "allowComments"]
+      }
+    }
+  ],
 };
