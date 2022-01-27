@@ -21,7 +21,9 @@
     "require": "./dist/wp-salts.cjs"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",
