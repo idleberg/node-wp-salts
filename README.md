@@ -43,4 +43,4 @@ wpSalts(["AUTH_KEY", "AUTH_SALT"], 128);
 
 ## License
 
-This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
+This work is licensed under [The MIT License](LICENSE)
