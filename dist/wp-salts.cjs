@@ -25,7 +25,7 @@ if (typeof window !== "undefined") {
 var window_1 = win;
 
 var window$1 = window_1;
-var nodeCrypto = require$$1__default['default'];
+var nodeCrypto = require$$1__default["default"];
 
 function getRandomValues(buf) {
   if (window$1.crypto && window$1.crypto.getRandomValues) {
@@ -128,7 +128,7 @@ var WORDPRESS_KEYS = [
 ];
 var MINIMUM_KEY_LENGTH = 64;
 /**
- * Returns object of default WordPress salts or any string/array of strings
+ * Returns object of default WordPress salts or  string/array of strings
  * @param length - length of the salt, defaults to 64
  * @returns - object of salts
  */
