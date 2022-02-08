@@ -10,12 +10,14 @@
     "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
     "lint:ts": "eslint ./src --ignore-path .gitignore",
     "lint": "npm-run-all --parallel lint:*",
-    "start": "rollup --watch --config",
+    "prepack": "npm run build",
+    "prepare": "husky install",
     "publish": "np --no-yarn",
-    "test": "ava --verbose",
-    "prepare": "husky install"
+    "start": "rollup --watch --config",
+    "test": "ava --verbose"
   },
   "type": "module",
+  "types": "./types/index.d.ts",
   "exports": {
     "import": "./dist/wp-salts.mjs",
     "require": "./dist/wp-salts.cjs"
@@ -26,7 +28,6 @@
     "LICENSE",
     "README.md"
   ],
-  "typings": "./types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/node-wp-salts.git"
