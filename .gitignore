@@ -12,6 +12,9 @@ shrinkwrap.yaml
 .eslintcache
 tsconfig.tsbuildinfo
 
+# build
+dist/
+
 # project specific
 *.exe
 *.nsi
