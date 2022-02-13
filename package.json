@@ -17,7 +17,7 @@
     "test": "ava --verbose"
   },
   "type": "module",
-  "types": "./types/index.d.ts",
+  "typings": "./types/index.d.ts",
   "exports": {
     "import": "./dist/wp-salts.mjs",
     "require": "./dist/wp-salts.cjs"
