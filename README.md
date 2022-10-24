@@ -3,6 +3,7 @@
 [![npm](https://flat.badgen.net/npm/license/wp-salts)](https://www.npmjs.org/package/wp-salts)
 [![npm](https://flat.badgen.net/npm/v/wp-salts)](https://www.npmjs.org/package/wp-salts)
 [![CI](https://img.shields.io/github/workflow/status/idleberg/node-wp-salts/CI?style=flat-square)](https://github.com/idleberg/node-wp-salts/actions)
+[![Snyk](https://flat.badgen.net/snyk/idleberg/wp-salts)](https://snyk.io/vuln/npm:wp-salts)
 
 Generates an object of default WordPress salts (or any other string) without the need of an internet-connection
 
