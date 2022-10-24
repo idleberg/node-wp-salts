@@ -14,13 +14,12 @@
     "prepare": "husky install",
     "publish": "np --no-yarn",
     "start": "rollup --watch --config",
-    "test": "ava --verbose"
+    "test": "uvu tests"
   },
   "type": "module",
   "typings": "./types/index.d.ts",
   "exports": {
-    "import": "./dist/wp-salts.mjs",
-    "require": "./dist/wp-salts.cjs"
+    "import": "./dist/wp-salts.mjs"
   },
   "files": [
     "dist/",
@@ -50,7 +49,6 @@
     "@types/node": "^16.4.3",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
-    "ava": "^4.0.1",
     "eslint": "^8.7.0",
     "eslint-plugin-json": "^3.0.0",
     "husky": "^7.0.0",
@@ -64,7 +62,8 @@
     "rollup": "^2.38.0",
     "rollup-plugin-filesize": "^9.1.0",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "uvu": "^0.5.6"
   },
   "lint-staged": {
     "*.(json|ts)": "eslint --cache --fix",
