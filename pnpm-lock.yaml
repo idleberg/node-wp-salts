@@ -10,7 +10,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.41.0
   eslint: ^8.26.0
   eslint-plugin-json: ^3.1.0
-  get-random-values: ^1.2.2
+  get-random-values: ^2.0.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
   np: ^7.6.2
@@ -26,7 +26,7 @@ specifiers:
   uvu: ^0.5.6
 
 dependencies:
-  get-random-values: 1.2.2
+  get-random-values: 2.0.0
 
 devDependencies:
   '@rollup/plugin-commonjs': 23.0.2_rollup@3.2.3
@@ -1929,9 +1929,9 @@ packages:
       has-symbols: 1.0.3
     dev: true
 
-  /get-random-values/1.2.2:
-    resolution: {integrity: sha512-lMyPjQyl0cNNdDf2oR+IQ/fM3itDvpoHy45Ymo2r0L1EjazeSl13SfbKZs7KtZ/3MDCeueiaJiuOEfKqRTsSgA==}
-    engines: {node: 10 || 12 || >=14}
+  /get-random-values/2.0.0:
+    resolution: {integrity: sha512-wWq8YlpDqoduAzHDnjwh1sX0xxsbChAHFhWK9sDlaxMi3SJchPOhFdMf3/J/xfpzSRcE4UE5BjfFZVDKmGRh/g==}
+    engines: {node: 14 || 16 || >=18}
     dependencies:
       global: 4.4.0
     dev: false
