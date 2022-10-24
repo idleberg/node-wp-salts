@@ -19,7 +19,8 @@
   "type": "module",
   "typings": "./types/index.d.ts",
   "exports": {
-    "import": "./dist/wp-salts.mjs"
+    "import": "./dist/wp-salts.mjs",
+    "require": "./dist/wp-salts.cjs"
   },
   "files": [
     "dist/",
@@ -62,8 +63,7 @@
     "rollup": "^2.38.0",
     "rollup-plugin-filesize": "^9.1.0",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3",
-    "uvu": "^0.5.6"
+    "typescript": "^4.1.3"
   },
   "lint-staged": {
     "*.(json|ts)": "eslint --cache --fix",
