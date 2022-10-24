@@ -1,6 +1,6 @@
 {
   "name": "wp-salts",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Generates an object of default WordPress salts (or any other string)",
   "scripts": {
     "build": "rollup --config",
