@@ -36,6 +36,7 @@
     "wordpress",
     "salt",
     "salts",
+		"shuffle-salts",
     "cryptography"
   ],
   "license": "MIT",
