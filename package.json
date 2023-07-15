@@ -3,8 +3,8 @@
   "version": "2.0.2",
   "description": "Generates an object of default WordPress salts (or any other string)",
   "scripts": {
-    "build": "rollup --config",
-    "dev": "npm run start",
+    "build": "esbuild src/wp-salts.ts --bundle --platform=node --outfile=dist/wp-salts.mjs --format=esm --external:get-random-values",
+    "dev": "npm run build -- --watch",
     "fix": "eslint --fix ./src",
     "lint:json": "eslint ./*.json --ignore-path .gitignore",
     "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
@@ -13,7 +13,7 @@
     "prepack": "npm run build",
     "prepare": "husky install",
     "publish": "np --no-yarn",
-    "start": "rollup --watch --config",
+    "start": "npm run start",
     "test": "uvu tests"
   },
   "type": "module",
@@ -36,7 +36,7 @@
     "wordpress",
     "salt",
     "salts",
-		"shuffle-salts",
+    "shuffle-salts",
     "cryptography"
   ],
   "license": "MIT",
@@ -44,13 +44,10 @@
     "get-random-values": "^2.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^23.0.2",
-    "@rollup/plugin-json": "^5.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.11.4",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
+    "esbuild": "^0.18.13",
     "eslint": "^8.26.0",
     "eslint-plugin-json": "^3.1.0",
     "husky": "^8.0.1",
@@ -61,8 +58,6 @@
     "remark-cli": "^11.0.0",
     "remark-preset-lint-recommended": "^6.1.2",
     "remark-preset-prettier": "^2.0.1",
-    "rollup": "^3.2.3",
-    "rollup-plugin-filesize": "^9.1.2",
     "tslib": "^2.4.0",
     "typescript": "^4.8.4",
     "uvu": "^0.5.6"
