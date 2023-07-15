@@ -1,7 +1,7 @@
 declare namespace WordpressSalts {
-  function wpSalts(keys: string | string[] | null, saltLength: number): string;
+  function wpSalts(keys: string | string[] | null, saltLength: number): ReturnString;
 
-  type ReturnString = {
+  interface ReturnString {
     [key: string]: string;
   }
 }

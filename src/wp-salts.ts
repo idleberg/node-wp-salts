@@ -14,7 +14,8 @@ const MINIMUM_KEY_LENGTH = 64;
 
 /**
  * Returns object of default WordPress salts or  string/array of strings
- * @param length - length of the salt, defaults to 64
+ * @param {string | string[] | null} keys - length of the salt, defaults to 64
+ * @param {number} length - length of the salt, defaults to 64
  * @returns - object of salts
  */
 const wpSalts = (keys: string | string[] | null = '', saltLength = 64): WordpressSalts.ReturnString => {
