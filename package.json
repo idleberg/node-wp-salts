@@ -16,7 +16,7 @@
     "prepare": "husky install",
     "publish": "np --no-yarn",
     "start": "npm run start",
-    "test": "uvu tests"
+    "test": "uvu -r tsm tests"
   },
   "type": "module",
   "typings": "./types/index.d.ts",
@@ -61,6 +61,7 @@
     "remark-preset-lint-recommended": "^6.1.2",
     "remark-preset-prettier": "^2.0.1",
     "tslib": "^2.6.0",
+    "tsm": "^2.3.0",
     "typescript": "^5.1.6",
     "uvu": "^0.5.6"
   },

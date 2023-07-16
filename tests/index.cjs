@@ -1,5 +1,5 @@
 const { test } = require('uvu');
-const { wpSalts } = require('../dist/wp-salts.cjs');
+const { wpSalts } = require('../src/wp-salts');
 const assert = require('uvu/assert');
 
 const WORDPRESS_KEYS = [

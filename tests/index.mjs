@@ -1,5 +1,5 @@
 import { test } from 'uvu';
-import { wpSalts } from '../dist/wp-salts.mjs';
+import { wpSalts } from '../dist/wp-salts';
 import * as assert from 'uvu/assert';
 
 const WORDPRESS_KEYS = [
