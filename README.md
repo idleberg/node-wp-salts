@@ -1,8 +1,8 @@
 # wp-salts
 
-[![npm](https://flat.badgen.net/npm/license/wp-salts)](https://www.npmjs.org/package/wp-salts)
-[![npm](https://flat.badgen.net/npm/v/wp-salts)](https://www.npmjs.org/package/wp-salts)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/default.yml?style=flat-square)](https://github.com/idleberg/node-wp-salts/actions)
+[![License](https://img.shields.io/github/license/idleberg/node-wp-salts?color=blue&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/blob/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
+[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/default.yml?style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
 
 Generates an object of default WordPress salts (or any other string) without the need of an internet-connection
 
