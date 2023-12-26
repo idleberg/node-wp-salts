@@ -15,7 +15,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "prepack": "npm run build",
     "prepare": "husky install",
-    "publish": "np --no-yarn",
+    "release": "np --no-yarn",
     "start": "npm run start",
     "test": "uvu -r tsm tests"
   },
