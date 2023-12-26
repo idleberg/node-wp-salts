@@ -2,10 +2,11 @@
   "name": "wp-salts",
   "version": "3.0.0",
   "description": "Generates an object of default WordPress salts (or any other string)",
+  "license": "MIT",
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:cjs": "esbuild src/wp-salts.ts --bundle --platform=node --outfile=dist/wp-salts.cjs --format=cjs --external:get-random-values",
-    "build:esm": "esbuild src/wp-salts.ts --bundle --platform=node --outfile=dist/wp-salts.mjs --format=esm --external:get-random-values",
+		"build:cjs": "tsup --config tsup.config.ts --format=cjs",
+		"build:esm": "tsup --config tsup.config.ts --format=esm",
     "dev": "npm run build:esm -- --watch",
     "fix": "eslint --fix ./src",
     "lint:json": "eslint ./*.json --ignore-path .gitignore",
@@ -19,10 +20,13 @@
     "test": "uvu -r tsm tests"
   },
   "type": "module",
-  "typings": "./types/index.d.ts",
+  "typings": "./dist/wp-salts.d.ts",
   "exports": {
-    "import": "./dist/wp-salts.mjs",
+    "import": "./dist/wp-salts.js",
     "require": "./dist/wp-salts.cjs"
+  },
+  "engine": {
+    "node": ">=18"
   },
   "files": [
     "dist/",
@@ -41,28 +45,27 @@
     "shuffle-salts",
     "cryptography"
   ],
-  "license": "MIT",
   "dependencies": {
-    "get-random-values": "^2.1.0"
+    "get-random-values": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.4",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "@typescript-eslint/parser": "^5.41.0",
-    "esbuild": "^0.18.13",
-    "eslint": "^8.45.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-json": "^3.1.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.2.3",
-    "np": "^7.6.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "np": "^9.2.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
-    "remark-cli": "^11.0.0",
-    "remark-preset-lint-recommended": "^6.1.2",
+    "prettier": "^3.1.1",
+    "remark-cli": "^12.0.0",
+    "remark-preset-lint-recommended": "^6.1.3",
     "remark-preset-prettier": "^2.0.1",
-    "tslib": "^2.6.0",
+    "tslib": "^2.6.2",
     "tsm": "^2.3.0",
-    "typescript": "^5.1.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
     "uvu": "^0.5.6"
   },
   "lint-staged": {
