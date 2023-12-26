@@ -17,28 +17,27 @@ Generates an object of default WordPress salts (or any other string) without the
 **Example:**
 
 ```js
-import { wpSalts } from "wp-salts";
+import { wpSalts } from 'wp-salts';
 
 // Standard WordPress salts
 wpSalts();
 
 // Custom salts
-wpSalts("SECURE_AUTH_KEY");
-wpSalts(["AUTH_KEY", "AUTH_SALT"], 128);
+wpSalts('SECURE_AUTH_KEY');
+wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 ```
 
 **Note:** The minimum length of each salt is 8-bit (64 characters)
 
 ## Credits
 
-- [austinpray](https://github.com/austinpray)
-- [idleberg](https://github.com/idleberg)
+-   [austinpray](https://github.com/austinpray)
+-   [idleberg](https://github.com/idleberg)
 
 ## Related
 
-- [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
-- [atom-wordpress-salts](https://atom.io/packages/wordpress-salts)
-- [vscode-wordpress-salts](https://marketplace.visualstudio.com/items?itemName=idleberg.wordpress-salts)
+-   [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
+-   [vscode-wordpress-salts](https://marketplace.visualstudio.com/items?itemName=idleberg.wordpress-salts)
 
 ## License
 
