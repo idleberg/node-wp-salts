@@ -13,10 +13,23 @@ const WORDPRESS_KEYS = [
 const MINIMUM_KEY_LENGTH = 64;
 
 /**
- * Returns object of default WordPress salts or  string/array of strings
- * @param {string | string[] | null} keys - length of the salt, defaults to 64
- * @param {number} length - length of the salt, defaults to 64
+ * Returns object of default WordPress salts or  string/array of strings.
+ *
+ * @param keys - length of the salt, defaults to 64
+ * @param length - length of the salt, defaults to 64
  * @returns - object of salts
+ *
+ * @example
+ * ```js
+ * import { wpSalts } from 'wp-salts';
+ *
+ * // Standard WordPress salts
+ * wpSalts();
+ *
+ * // Custom salts
+ * wpSalts('SECURE_AUTH_KEY');
+ * wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
+ * ```
  */
 const wpSalts = (keys: string | string[] | null = '', saltLength = 64): Record<string, string> => {
 	const output: Record<string, string> = {};

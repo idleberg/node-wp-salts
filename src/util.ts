@@ -3,7 +3,8 @@ import getRandomValues from 'get-random-values';
 const MINIMUM_KEY_LENGTH = 64;
 
 /**
- * Generate random number
+ * Generate random number.
+ *
  * @param min - lowest value
  * @param max - highest value
  * @returns - random number
@@ -39,7 +40,8 @@ function getRandom(min: number, max: number): number {
 }
 
 /**
- * Get random character
+ * Get random character.
+ *
  * @returns - random character
  *
  * @see https://roots.io/salts.html
@@ -61,7 +63,8 @@ function getRandomChar(): string {
 }
 
 /**
- * Generate a salt
+ * Generate a salt.
+ *
  * @param length - length of the salt, defaults to 64
  * @returns - string
  *
