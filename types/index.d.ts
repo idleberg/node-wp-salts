@@ -1,10 +1,5 @@
 declare namespace WordpressSalts {
-	function wpSalts(keys: string | string[] | null, saltLength: number): ReturnString;
-
-	interface ReturnString {
-		[key: string]: string;
-	}
+	function wpSalts(keys: string | string[] | null, saltLength: number): Record<string, string>;
 }
 
-export = WordpressSalts;
-export as namespace WordpressSalts;
+export default WordpressSalts;
