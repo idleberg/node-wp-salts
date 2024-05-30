@@ -1,7 +1,7 @@
 {
   "name": "wp-salts",
   "version": "4.0.0",
-  "description": "Generates an object of default WordPress salts (or any other string)",
+  "description": "Generates an object of default WordPress salts (or any other string). No internet required.",
   "license": "MIT",
   "scripts": {
     "build": "tsup",
