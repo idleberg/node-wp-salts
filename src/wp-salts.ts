@@ -1,14 +1,14 @@
 import { generateSalt } from './util';
 
 const WORDPRESS_KEYS = [
-  'AUTH_KEY',
-  'SECURE_AUTH_KEY',
-  'LOGGED_IN_KEY',
-  'NONCE_KEY',
-  'AUTH_SALT',
-  'SECURE_AUTH_SALT',
-  'LOGGED_IN_SALT',
-  'NONCE_SALT',
+	'AUTH_KEY',
+	'SECURE_AUTH_KEY',
+	'LOGGED_IN_KEY',
+	'NONCE_KEY',
+	'AUTH_SALT',
+	'SECURE_AUTH_SALT',
+	'LOGGED_IN_SALT',
+	'NONCE_SALT',
 ];
 const MINIMUM_KEY_LENGTH = 64;
 
@@ -19,23 +19,21 @@ const MINIMUM_KEY_LENGTH = 64;
  * @returns - object of salts
  */
 const wpSalts = (keys: string | string[] | null = '', saltLength = 64): WordpressSalts.ReturnString => {
-  const output = {};
+	const output = {};
 
-  if (typeof keys === 'string') {
-    keys = (keys.length > 0) ? [ keys ] : WORDPRESS_KEYS;
-  } else if (typeof keys === 'object') {
-    keys = (keys !== null && keys.length > 0) ? keys : WORDPRESS_KEYS;
-  } else {
-    keys = WORDPRESS_KEYS;
-  }
+	if (typeof keys === 'string') {
+		keys = keys.length > 0 ? [keys] : WORDPRESS_KEYS;
+	} else if (typeof keys === 'object') {
+		keys = keys !== null && keys.length > 0 ? keys : WORDPRESS_KEYS;
+	} else {
+		keys = WORDPRESS_KEYS;
+	}
 
-  saltLength = (saltLength < MINIMUM_KEY_LENGTH) ? MINIMUM_KEY_LENGTH : saltLength;
+	saltLength = saltLength < MINIMUM_KEY_LENGTH ? MINIMUM_KEY_LENGTH : saltLength;
 
-  keys.map(key => output[key] = generateSalt(saltLength));
+	keys.map((key) => (output[key] = generateSalt(saltLength)));
 
-  return output;
+	return output;
 };
 
-export {
-  wpSalts
-};
+export { wpSalts };
