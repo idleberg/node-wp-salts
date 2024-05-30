@@ -3,8 +3,10 @@
 > Generates an object of default WordPress salts (or any other string). No internet required.
 
 [![License](https://img.shields.io/github/license/idleberg/node-wp-salts?color=blue&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/blob/main/LICENSE)
-[![Version](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
-[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/node.yml?style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
+[![Version: npm](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
+[![Version: jsr](https://img.shields.io/jsr/v/@idleberg/node-wp-salts?style=for-the-badge)](https://jsr.io/@idleberg/node-wp-salts)
+[![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
+[![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
 
 ## Installation
 
