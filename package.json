@@ -1,11 +1,11 @@
 {
   "name": "wp-salts",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Generates an object of default WordPress salts (or any other string). No internet required.",
   "license": "MIT",
   "scripts": {
     "build": "tsup",
-		"dev": "npm run build -- --watch",
+    "dev": "npm run build -- --watch",
     "fix": "eslint --fix ./src",
     "lint:code": "eslint **/*.json **/*.ts --ignore-path .gitignore",
     "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
@@ -13,7 +13,7 @@
     "prepack": "npm run build",
     "prepare": "husky",
     "publish:jsr": "deno publish",
-		"publish:npm": "np --no-yarn --any-branch",
+    "publish:npm": "np --no-yarn --any-branch",
     "start": "npm run start",
     "test": "uvu -r tsm tests"
   },
