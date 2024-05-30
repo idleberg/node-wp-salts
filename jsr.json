@@ -1,0 +1,14 @@
+{
+	"name": "@idleberg/wordpress-salts",
+	"version": "5.0.0",
+	"exports": "./src/wp-salts.ts",
+	"publish": {
+		"include": [
+			"./src/*",
+			"./types/*",
+			"jsr.json",
+			"LICENSE",
+			"README.md"
+		]
+	}
+}
