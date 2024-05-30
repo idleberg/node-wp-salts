@@ -1,10 +1,10 @@
 # wp-salts
 
+> Generates an object of default WordPress salts (or any other string). No internet required.
+
 [![License](https://img.shields.io/github/license/idleberg/node-wp-salts?color=blue&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/blob/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/node.yml?style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
-
-Generates an object of default WordPress salts (or any other string) without the need of an internet-connection
 
 ## Installation
 
@@ -41,4 +41,4 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 
 ## License
 
-This work is licensed under [The MIT License](LICENSE)
+This work is licensed under [The MIT License](LICENSE).
