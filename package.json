@@ -18,10 +18,7 @@
   },
   "type": "module",
   "typings": "./dist/wp-salts.d.ts",
-  "exports": {
-    "import": "./dist/wp-salts.js",
-    "require": "./dist/wp-salts.cjs"
-  },
+  "exports": "./dist/wp-salts.js",
   "engine": {
     "node": ">=18"
   },
