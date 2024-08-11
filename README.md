@@ -4,9 +4,9 @@
 
 [![License](https://img.shields.io/github/license/idleberg/node-wp-salts?color=blue&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
-[![Version: jsr](https://img.shields.io/jsr/v/@idleberg/wordpress-salts?style=for-the-badge)](https://jsr.io/@idleberg/node-wp-salts)
-[![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
-[![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions)
+[![Version: jsr](https://img.shields.io/jsr/v/@idleberg/wordpress-salts?style=for-the-badge)](https://jsr.io/@idleberg/wordpress-salts)
+[![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions/workflows/node.yml)
+[![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/node-wp-salts/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/actions/workflows/deno.yml)
 
 ## Installation
 
