@@ -1,7 +1,7 @@
 {
   "name": "wp-salts",
   "version": "5.0.0",
-  "description": "Generates an object of default WordPress salts (or any other string). No internet required.",
+  "description": "Generates an object of default WordPress salts. Fully offline.",
   "license": "MIT",
   "scripts": {
     "build": "tsup",

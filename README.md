@@ -1,6 +1,6 @@
 # wp-salts
 
-> Generates an object of default WordPress salts (or any other string). No internet required.
+> Generates an object of default WordPress salts. Fully offline.
 
 [![License](https://img.shields.io/github/license/idleberg/node-wp-salts?color=blue&style=for-the-badge)](https://github.com/idleberg/node-wp-salts/blob/main/LICENSE)
 [![Version: npm](https://img.shields.io/npm/v/wp-salts?style=for-the-badge)](https://www.npmjs.org/package/wp-salts)
