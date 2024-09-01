@@ -31,11 +31,6 @@ wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
 
 **Note:** The minimum length of each salt is 8-bit (64 characters)
 
-## Credits
-
-- [idleberg](https://github.com/idleberg)
-- [austinpray](https://github.com/austinpray)
-
 ## Related
 
 - [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
