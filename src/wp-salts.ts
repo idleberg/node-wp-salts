@@ -31,22 +31,22 @@ const MINIMUM_KEY_LENGTH = 64;
  * wpSalts(['AUTH_KEY', 'AUTH_SALT'], 128);
  * ```
  */
-const wpSalts = (keys: string | string[] | null = '', saltLength = 64): Record<string, string> => {
-	const output: Record<string, string> = {};
+export function wpSalts(keys: string | string[] | null = '', saltLength = 64): Record<string, string> {
+	const resolvedKeys =
+		typeof keys === 'string'
+			? keys.length > 0
+				? [keys]
+				: WORDPRESS_KEYS
+			: keys !== null && keys.length > 0
+				? keys
+				: WORDPRESS_KEYS;
 
-	if (typeof keys === 'string') {
-		keys = keys.length > 0 ? [keys] : WORDPRESS_KEYS;
-	} else if (typeof keys === 'object') {
-		keys = keys !== null && keys.length > 0 ? keys : WORDPRESS_KEYS;
-	} else {
-		keys = WORDPRESS_KEYS;
-	}
+	const finalSaltLength = saltLength < MINIMUM_KEY_LENGTH ? MINIMUM_KEY_LENGTH : saltLength;
 
-	saltLength = saltLength < MINIMUM_KEY_LENGTH ? MINIMUM_KEY_LENGTH : saltLength;
-
-	keys.map((key) => (output[key] = generateSalt(saltLength)));
-
-	return output;
-};
-
-export { wpSalts };
+	return resolvedKeys.reduce(
+		(output, key) => {
+			return { ...output, [key]: generateSalt(finalSaltLength) };
+		},
+		{} as Record<string, string>,
+	);
+}
