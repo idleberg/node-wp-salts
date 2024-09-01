@@ -1,4 +1,4 @@
-import { generateSalt } from './util';
+import { generateSalt } from './util.ts';
 
 const WORDPRESS_KEYS = [
 	'AUTH_KEY',
