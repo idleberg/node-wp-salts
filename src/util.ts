@@ -9,7 +9,7 @@ const MINIMUM_KEY_LENGTH = 64;
  * @param max - highest value
  * @returns - random number
  *
- * @see https://github.com/EFForg/OpenWireless/blob/0e0bd06277f7178f840c36a9b799c7659870fa57/app/js/diceware.js#L59
+ * @see {@link https://github.com/EFForg/OpenWireless/blob/0e0bd06277f7178f840c36a9b799c7659870fa57/app/js/diceware.js#L59}
  */
 function getRandom(min: number, max: number): number {
 	let randomValue = 0;
@@ -44,7 +44,7 @@ function getRandom(min: number, max: number): number {
  *
  * @returns - random character
  *
- * @see https://roots.io/salts.html
+ * @see {@link https://roots.io/salts.html}
  */
 function getRandomChar(): string {
 	const minCharacter = 33;
@@ -63,15 +63,13 @@ function getRandomChar(): string {
 }
 
 /**
- * Generate a salt.
+ * Generates a salt.
  *
  * @param length - length of the salt, defaults to 64
  * @returns - string
  *
- * @see https://roots.io/salts.html
+ * @see {@link https://roots.io/salts.html}
  */
-function generateSalt(saltLength = MINIMUM_KEY_LENGTH): string {
+export function generateSalt(saltLength = MINIMUM_KEY_LENGTH): string {
 	return new Array(...new Array(saltLength)).map(getRandomChar).join('');
 }
-
-export { generateSalt };
