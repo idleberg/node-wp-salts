@@ -4,6 +4,7 @@
 	"exports": "./src/wp-salts.ts",
 	"publish": {
 		"include": [
+			"src/*.ts",
 			"jsr.json",
 			"LICENSE",
 			"README.md"
