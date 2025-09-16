@@ -3,11 +3,6 @@
 	"version": "5.0.1",
 	"exports": "./src/wp-salts.ts",
 	"publish": {
-		"include": [
-			"src/*.ts",
-			"jsr.json",
-			"LICENSE",
-			"README.md"
-		]
+		"include": ["src/*.ts", "jsr.json", "LICENSE", "README.md"]
 	}
 }

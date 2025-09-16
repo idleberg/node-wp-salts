@@ -23,7 +23,7 @@ export default tseslint.config(
 	{
 		files: ['tsconfig.json'],
 		rules: {
-			'jsonc/no-comments': 'off'
-		}
+			'jsonc/no-comments': 'off',
+		},
 	},
 );

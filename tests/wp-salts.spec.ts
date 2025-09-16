@@ -1,6 +1,6 @@
 import { test } from 'uvu';
-import { wpSalts } from '../src/wp-salts.ts';
 import * as assert from 'uvu/assert';
+import { wpSalts } from '../src/wp-salts.ts';
 
 const WORDPRESS_KEYS = [
 	'AUTH_KEY',

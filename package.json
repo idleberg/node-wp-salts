@@ -1,55 +1,55 @@
 {
-  "name": "wp-salts",
-  "version": "5.0.1",
-  "description": "Generates an object of default WordPress salts. Fully offline.",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsdown",
-    "dev": "npm run build -- --watch",
-    "lint": "biome check",
-    "prepack": "npm run build",
-    "prepare": "lefthook install",
-    "publish:jsr": "deno publish",
-    "publish:npm": "np --any-branch",
-    "start": "npm run start",
-    "test": "uvu -r tsm tests"
-  },
-  "type": "module",
-  "typings": "./dist/wp-salts.d.ts",
-  "exports": "./dist/wp-salts.js",
-  "engine": {
-    "node": ">=18"
-  },
-  "files": [
-    "dist/",
-    "LICENSE",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/idleberg/node-wp-salts.git"
-  },
-  "keywords": [
-    "wordpress",
-    "salt",
-    "salts",
-    "shuffle-salts",
-    "cryptography"
-  ],
-  "dependencies": {
-    "get-random-values": "^3.0.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
-    "@idleberg/configs": "^0.2.0",
-    "@types/node": "^18.19.44",
-    "lefthook": "^1.13.0",
-    "np": "^10.0.7",
-    "tsdown": "^0.15.1",
-    "tsm": "^2.3.0",
-    "typescript": "^5.5.4",
-    "uvu": "^0.5.6",
-    "valibot": "^0.40.0"
-  },
-  "packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706"
+	"name": "wp-salts",
+	"version": "5.0.1",
+	"description": "Generates an object of default WordPress salts. Fully offline.",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsdown",
+		"dev": "npm run build -- --watch",
+		"lint": "biome check",
+		"prepack": "npm run build",
+		"prepare": "lefthook install",
+		"publish:jsr": "deno publish",
+		"publish:npm": "np --any-branch",
+		"start": "npm run start",
+		"test": "uvu -r tsm tests"
+	},
+	"type": "module",
+	"typings": "./dist/wp-salts.d.ts",
+	"exports": "./dist/wp-salts.js",
+	"engine": {
+		"node": ">=18"
+	},
+	"files": [
+		"dist/",
+		"LICENSE",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idleberg/node-wp-salts.git"
+	},
+	"keywords": [
+		"wordpress",
+		"salt",
+		"salts",
+		"shuffle-salts",
+		"cryptography"
+	],
+	"dependencies": {
+		"get-random-values": "^3.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.4",
+		"@idleberg/configs": "^0.2.0",
+		"@types/node": "^18.19.44",
+		"lefthook": "^1.13.0",
+		"np": "^10.0.7",
+		"tsdown": "^0.15.1",
+		"tsm": "^2.3.0",
+		"typescript": "^5.5.4",
+		"uvu": "^0.5.6",
+		"valibot": "^0.40.0"
+	},
+	"packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706"
 }
