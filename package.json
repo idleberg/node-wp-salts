@@ -4,14 +4,13 @@
   "description": "Generates an object of default WordPress salts. Fully offline.",
   "license": "MIT",
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "npm run build -- --watch",
-    "lint:code": "eslint **/*.json ./src/**/*.ts --no-warn-ignored",
-    "lint": "npm-run-all --parallel lint:*",
+    "lint": "biome check",
     "prepack": "npm run build",
-    "prepare": "husky",
+    "prepare": "lefthook install",
     "publish:jsr": "deno publish",
-    "publish:npm": "np --no-yarn --any-branch",
+    "publish:npm": "np --any-branch",
     "start": "npm run start",
     "test": "uvu -r tsm tests"
   },
@@ -41,30 +40,16 @@
     "get-random-values": "^3.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@idleberg/configs": "^0.2.0",
     "@types/node": "^18.19.44",
-    "esbuild": "^0.23.1",
-    "eslint": "^9.9.1",
-    "eslint-plugin-jsonc": "^2.16.0",
-    "eslint-plugin-unicorn": "^55.0.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
+    "lefthook": "^1.13.0",
     "np": "^10.0.7",
-    "npm-run-all2": "^6.2.2",
-    "prettier": "^3.3.3",
+    "tsdown": "^0.15.1",
     "tsm": "^2.3.0",
-    "tsup": "^8.2.4",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0",
     "uvu": "^0.5.6",
     "valibot": "^0.40.0"
   },
-  "lint-staged": {
-    "*.json": "eslint --cache --fix",
-    "*.ts": [
-      "eslint --cache --fix",
-      "prettier --cache --write"
-    ],
-    "*.md": "prettier --write"
-  },
-  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+  "packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706"
 }
