@@ -1,7 +1,7 @@
 import { randomBytes } from 'node:crypto';
 
 const MINIMUM_KEY_LENGTH = 64;
-const FORBIDDEN_CHARACTERS = ["'", '"'];
+const FORBIDDEN_CHARACTERS = ["'", '"', '\\'];
 
 /**
  * Generate a random BigInt value.
