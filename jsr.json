@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/wordpress-salts",
-	"version": "5.0.1",
+	"version": "6.0.0",
 	"exports": "./src/wp-salts.ts",
 	"publish": {
 		"include": ["src/*.ts", "jsr.json", "LICENSE", "README.md"]
