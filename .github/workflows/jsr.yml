@@ -29,9 +29,13 @@ jobs:
             ~/.cache/deno
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
-      - run: |
-          deno install
-          deno lint
+      - name: Install dependencies
+        run: deno install
 
+      - name: Lint Source
+        run: deno lint
+
+      - name: Publish to JSR
+        run: |
           deno publish --dry-run
           deno publish
