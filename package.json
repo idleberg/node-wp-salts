@@ -21,7 +21,7 @@
 	"typings": "./dist/wp-salts.d.ts",
 	"exports": "./dist/wp-salts.js",
 	"engine": {
-		"node": ">=18"
+		"node": ">=20"
 	},
 	"files": [
 		"dist/",
