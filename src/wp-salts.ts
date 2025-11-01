@@ -45,7 +45,9 @@ export function wpSalts(keys: string | string[] | null = '', saltLength = 64): R
 
 	return resolvedKeys.reduce(
 		(output, key) => {
-			return { ...output, [key]: generateSalt(finalSaltLength) };
+			output[key] = generateSalt(finalSaltLength);
+
+			return output;
 		},
 		{} as Record<string, string>,
 	);
