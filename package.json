@@ -1,6 +1,6 @@
 {
 	"name": "wp-salts",
-	"version": "5.0.1",
+	"version": "6.0.0",
 	"description": "Generates an object of default WordPress salts. Fully offline.",
 	"license": "MIT",
 	"scripts": {
