@@ -15,6 +15,9 @@ tsconfig.tsbuildinfo
 # build
 dist/
 
+# tests
+coverage/
+
 # project specific
 *.exe
 *.nsi

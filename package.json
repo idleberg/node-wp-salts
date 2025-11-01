@@ -15,7 +15,7 @@
 		"publish:jsr": "deno publish",
 		"publish:npm": "np --any-branch",
 		"start": "npm run start",
-		"test": "uvu -r tsm tests"
+		"test": "vitest run"
 	},
 	"type": "module",
 	"typings": "./dist/wp-salts.d.ts",
@@ -47,15 +47,15 @@
 		"@commitlint/config-conventional": "^19.8.1",
 		"@idleberg/configs": "^0.3.1",
 		"@types/node": "^24.9.1",
+		"@vitest/coverage-v8": "4.0.6",
 		"concurrently": "^9.2.1",
 		"knip": "^5.66.3",
 		"np": "^10.2.0",
 		"publint": "^0.3.15",
 		"tsdown": "^0.15.10",
-		"tsm": "^2.3.0",
 		"typescript": "^5.9.3",
-		"uvu": "^0.5.6",
-		"valibot": "^1.1.0"
+		"valibot": "^1.1.0",
+		"vitest": "^4.0.6"
 	},
 	"packageManager": "pnpm@10.19.1-oidc-test.3+sha512.e5961a4b56bb37620f97b65da4ca56216634bf39ed358eda925f0f036534d458fa249d93ed0021410523f8bb7ed8512b61fe5532ed3e81777793366c6be026b5"
 }
