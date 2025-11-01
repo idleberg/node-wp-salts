@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      get-random-values:
-        specifier: ^4.1.0
-        version: 4.1.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.1.0
@@ -1391,10 +1387,6 @@ packages:
     resolution: {integrity: sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==}
     engines: {node: '>=18'}
 
-  get-random-values@4.1.0:
-    resolution: {integrity: sha512-nq0Ud4+6jJPDxMSN6J8y6PuqvMHFoJLUqHVKtSj1qJ5WObHkBCRAI8YLVFNWEbCZERbS0D9RYKN8fwALRuJR7g==}
-    engines: {node: 20 || 22 || >=24}
-
   get-stream@8.0.1:
     resolution: {integrity: sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==}
     engines: {node: '>=16'}
@@ -2577,9 +2569,6 @@ packages:
   widest-line@5.0.0:
     resolution: {integrity: sha512-c9bZp7b5YtRj2wOe6dlj32MK+Bx/M/d+9VB2SHM1OtsUHR0aV0tdP6DWh/iMt0kWi1t5g1Iudu6hQRNd1A4PVA==}
     engines: {node: '>=18'}
-
-  window-or-global@1.0.1:
-    resolution: {integrity: sha512-tE12J/NenOv4xdVobD+AD3fT06T4KNqnzRhkv5nBIu7K+pvOH2oLCEgYP+i+5mF2jtI6FEADheOdZkA8YWET9w==}
 
   wrap-ansi@3.0.1:
     resolution: {integrity: sha512-iXR3tDXpbnTpzjKSylUJRkLuOrEC7hwEB221cgn6wtF8wpmz28puFXAEfPT5zrjM3wahygB//VuWEr1vTkDcNQ==}
@@ -3797,10 +3786,6 @@ snapshots:
 
   get-east-asian-width@1.4.0: {}
 
-  get-random-values@4.1.0:
-    dependencies:
-      window-or-global: 1.0.1
-
   get-stream@8.0.1: {}
 
   get-tsconfig@4.13.0:
@@ -4943,8 +4928,6 @@ snapshots:
   widest-line@5.0.0:
     dependencies:
       string-width: 7.2.0
-
-  window-or-global@1.0.1: {}
 
   wrap-ansi@3.0.1:
     dependencies:

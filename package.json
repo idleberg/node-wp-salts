@@ -39,9 +39,7 @@
 		"shuffle-salts",
 		"cryptography"
 	],
-	"dependencies": {
-		"get-random-values": "^4.1.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
