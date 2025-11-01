@@ -1,6 +1,7 @@
 import { randomBytes } from 'node:crypto';
 
 const MINIMUM_KEY_LENGTH = 64;
+const FORBIDDEN_CHARACTERS = ["'", '"'];
 
 /**
  * Generate a random BigInt value.
@@ -34,7 +35,7 @@ function getRandomChar(): string {
 		(Number(getRandom(1)) % (maxCharacter - minCharacter + 1)) + minCharacter,
 	);
 
-	if (["'", '"', '\\'].some((badCharacter) => character === badCharacter)) {
+	if (FORBIDDEN_CHARACTERS.some((forbiddenCharacter) => character === forbiddenCharacter)) {
 		return getRandomChar();
 	}
 
