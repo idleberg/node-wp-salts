@@ -56,7 +56,7 @@ describe('generateSalt', () => {
 
 		it('should not contain single quotes', () => {
 			// Generate multiple salts to increase confidence
-			for (let i = 0; i < 10; i++) {
+			for (let i = 0; i < 1_000; i++) {
 				const salt = generateSalt(100);
 				expect(salt).not.toContain("'");
 			}
@@ -64,7 +64,7 @@ describe('generateSalt', () => {
 
 		it('should not contain double quotes', () => {
 			// Generate multiple salts to increase confidence
-			for (let i = 0; i < 10; i++) {
+			for (let i = 0; i < 1_000; i++) {
 				const salt = generateSalt(100);
 				expect(salt).not.toContain('"');
 			}
@@ -72,7 +72,7 @@ describe('generateSalt', () => {
 
 		it('should not contain backslashes', () => {
 			// Generate multiple salts to increase confidence
-			for (let i = 0; i < 10; i++) {
+			for (let i = 0; i < 1_000; i++) {
 				const salt = generateSalt(100);
 				expect(salt).not.toContain('\\');
 			}
