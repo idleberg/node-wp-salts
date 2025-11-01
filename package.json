@@ -18,8 +18,10 @@
 		"test": "vitest run"
 	},
 	"type": "module",
-	"typings": "./dist/wp-salts.d.ts",
-	"exports": "./dist/wp-salts.js",
+	"exports": {
+		"types": "./dist/wp-salts.d.ts",
+		"import": "./dist/wp-salts.js"
+	},
 	"engine": {
 		"node": ">=20"
 	},
