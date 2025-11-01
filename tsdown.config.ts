@@ -8,7 +8,6 @@ export default defineConfig((options) => {
 		clean: isProduction,
 		dts: isProduction,
 		entry: ['src/wp-salts.ts'],
-		external: ['get-random-values'],
 		format: 'esm',
 		minify: isProduction,
 	};
