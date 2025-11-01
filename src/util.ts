@@ -50,5 +50,7 @@ function getRandomChar(): string {
  * @see {@link https://roots.io/salts.html}
  */
 export function generateSalt(saltLength = MINIMUM_KEY_LENGTH): string {
-	return Array.from({ length: saltLength }, getRandomChar).join('');
+	const finalSaltLength = saltLength < MINIMUM_KEY_LENGTH ? MINIMUM_KEY_LENGTH : saltLength;
+
+	return Array.from({ length: finalSaltLength }, getRandomChar).join('');
 }
