@@ -43,7 +43,7 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: deno install
+        run: deno install --no-lock
 
       - name: Lint Source
         run: deno lint
