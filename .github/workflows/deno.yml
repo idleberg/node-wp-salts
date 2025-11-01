@@ -46,7 +46,7 @@ jobs:
         run: deno install
 
       - name: Lint Source
-        run: deno lint .
+        run: deno lint
 
       - name: Run Tests
         run: deno run --allow-all --unstable-sloppy-imports npm:uvu tests
