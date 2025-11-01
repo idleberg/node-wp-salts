@@ -19,8 +19,6 @@ dist/
 coverage/
 
 # project specific
-*.exe
-*.nsi
 test.js
 test.ts
 todo.md
