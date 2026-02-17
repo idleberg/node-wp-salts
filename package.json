@@ -10,7 +10,6 @@
 		"lint:biome": "biome check",
 		"lint:e18e": "e18e-cli analyze",
 		"prepack": "npm run build",
-		"prepare": "lefthook install",
 		"publish:jsr": "deno publish",
 		"publish:npm": "np --any-branch",
 		"start": "npm run start",
@@ -51,6 +50,11 @@
 		"tsdown": "^0.18.0",
 		"typescript": "^5.9.3",
 		"vitest": "^4.0.15"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"lefthook"
+		]
 	},
 	"packageManager": "pnpm@10.19.1-oidc-test.3+sha512.e5961a4b56bb37620f97b65da4ca56216634bf39ed358eda925f0f036534d458fa249d93ed0021410523f8bb7ed8512b61fe5532ed3e81777793366c6be026b5"
 }
